@@ -1,15 +1,15 @@
 #!/usr/bin/env bash
-# This file tags and uploads an image to Docker Hub
 
-# Assumes that an image is built via `run_docker.sh`
+## Complete the following steps to get Docker running locally
 
 # Step 1:
-# Create dockerpath
-# dockerpath=<your docker ID/path>
+# Build image and add a descriptive tag
+docker build --tag=edunicastro/microservice_api .
 
-# Step 2:  
-# Authenticate & tag
-echo "Docker ID and Image: $dockerpath"
+# Step 2: 
+# List docker images
+docker image ls
 
-# Step 3:
-# Push image to a docker repository
+# Step 3: 
+# Run flask app
+docker run -p 8000:80 edunicastro/microservice_api
